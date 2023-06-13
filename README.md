@@ -2,9 +2,9 @@ This is a quick and dirty pipeline for whisper_jax on a A100 Server to transcrib
 
 # Install and Usage:
 
-1. clone this repository by `git clone `
+1. clone this repository by `git clone https://github.com/jakobkilian/whisper-jax-toolchain.git`
 2. go to the directory with `cd whisper-jax-toolchain`
-3. run the "init.sh" script by `./init.sh``
+3. run the "init.sh" script by `./init.sh`
 4. put your audio file (mp3, wav, ...) in the directory "input" 
 5. open the "transcribe.ipynb" Jupyter Notebook and run cell by cell
 6. download output from the directory "output"
