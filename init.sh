@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# This script initializes a few things so that a JupyterLabs Instance on the KITeGG Server can be used right away to train tensorflow models for MCUs
-# As we want to use the Arduion TinyML Eloquent library (https://eloquentarduino.com/libraries/eloquent-tinyml/) we need to use tf 2.1.1
-# To do so the script makes conda envs and kernels persistent (so that they are still there after a reboot), creates a new conda env 
-# with the respective python version (3.7) and installs some packages (tensorflow, protobuf, matplotlib, ipykernel).
-# To prevent a versioning-bug, it then updates jupyter and in the end lists all available kernels as a cross-check.
-
 # ______ Make conda envs and jupyter kernel persistent ______
 # only /home is persistent, so we need to store envs and kernels here
 # create jupyter config file so that kernels will stored in /home
@@ -22,7 +16,7 @@ conda init bash
 source ~/.bashrc
 # activate new env (with full path at the first time)
 conda activate /home/jovyan/.conda_envs/py39
-#install dependencies (downgrade TF, and protobuf)
+#install dependencies
 conda install -y cudatoolkit-dev=11.3.1 -c conda-forge
 conda install -y -c anaconda cudnn
 pip install --upgrade "jax[cuda11_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
