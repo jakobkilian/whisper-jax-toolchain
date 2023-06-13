@@ -1,4 +1,5 @@
 This is a quick and dirty pipeline for whisper_jax on a A100 Server to transcribe audio files (any format) to continuous text and timestamped text in about 3% of the duration of the original audio. 
+Used 40GB from a A100, with 10GB it fails to load the model due to RAM limits.
 
 # Install and Usage:
 
