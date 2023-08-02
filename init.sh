@@ -20,7 +20,7 @@ conda activate /home/jovyan/.conda_envs/py39
 conda install -y cudatoolkit-dev=11.3.1 -c conda-forge
 conda install -y -c anaconda cudnn
 pip install --upgrade "jax[cuda11_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-pip install git+https://github.com/jakob-kilian/whisper-jax.git
+pip install git+https://github.com/jakobkilian/whisper-jax.git
 # install IPython kernel (inside of new env!) to make it visible
 conda install ipykernel -y
 
